@@ -1,0 +1,9 @@
+{% for p in parents %}
+    <li><a href="{% url 'select_menu' p.slug %}">{{ p.title }}</a></li>
+{% endfor %}
+<li>{{ selected_menu.title }}</li>
+<ul>
+{% for c in children %}
+    <li><a href="{% url 'select_menu' c.slug %}">{{ c.title }}</a></li>
+{% endfor %}
+</ul>

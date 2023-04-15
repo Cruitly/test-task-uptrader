@@ -1,0 +1,15 @@
+{% load menu_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if menu %}Menu: {{ menu }}{% else %}Home{% endif %}</title>
+</head>
+<body>
+{% if menu %}
+    {% draw_menu menu %}
+{% else %}
+    {% draw_menu 'main-menu' %}
+{% endif %}
+</body>
+</html>
